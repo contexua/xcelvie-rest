@@ -37,7 +37,27 @@ After you have checked out the project, you need to build it using maven:
 ```
 
 
-## Usage
+## Usage - Spring
+
+
+
+* Start the application. It's a spring boot server using an embedded catalina engine running on 8080:
+
+```bash
+
+~/dev/xcelvie-rest/mvn spring-boot:run
+
+```
+Note the progress of the spring boot startup log and ensure the tests run correctly.
+
+* Open a 'browser of your choice' and paste in the swagger URL: http://localhost:8080/swagger-ui/
+* Follow the instructions in the swagger UI to perform the API functions:
+
+
+![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-image.png)
+
+
+## Usage - Mongo
 
 * Ensure your mongodb is running - Mine runs as a service:
 
@@ -63,24 +83,6 @@ Sep 14 10:27:17 kevin-notebook systemd[1]: Started An object/document-oriented d
 
 </pre>
 
-
-* Start the application. It's a spring boot server using an embedded catalina engine running on 8080:
-
-```bash
-
-~/dev/xcelvie-rest/mvn spring-boot:run
-
-```
-Note the progress of the spring boot startup log and ensure the tests run correctly.
-
-* Open a 'browser of your choice' and paste in the swagger URL: http://localhost:8080/swagger-ui/
-* Follow the instructions in the swagger UI to perform the API functions:
-
-
-![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-image.png)
-
-
-## Mongo Interigation
 
 Its always good to inspect the raw data in mongo after creating records via the API. Some commands to help are:
 
@@ -178,6 +180,8 @@ If you have any general questions about the function of the API, then the docume
 * Testing is pretty basic - just testing the controller httpstatus messages, I mocked the service call, but still need to mock the DAO's
 * Persistence should probably be via a que, but for this example the service is on the same JVM.
 * Service helpers are hardcoded, business domain services should be used.
+* No instructions for running in a Microsoft Windows environment.
+* Candidate for containerisation.
 
 ## License
 This application is free to use in any scenario with no responsibility owned by Kevin Hamid.
