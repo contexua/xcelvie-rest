@@ -77,7 +77,97 @@ Note the progress of the spring boot startup log and ensure the tests run correc
 * Follow the instructions in the swagger UI to perform the API functions:
 
 
-![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-xcelvie.png)
+![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-image.png)
+
+
+## Mongo Interigation
+
+Its always good to inspect the raw data in mongo after creating records via the API. Some commands to help are:
+
+<pre>mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { &quot;id&quot; : UUID(&quot;c525e9d2-3be8-4d72-a812-b26f5342594f&quot;) }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2020-09-14T06:27:17.510+0200 I STORAGE  [initandlisten] 
+2020-09-14T06:27:17.510+0200 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-09-14T06:27:17.510+0200 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-09-14T06:27:19.154+0200 I CONTROL  [initandlisten] 
+2020-09-14T06:27:19.154+0200 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-09-14T06:27:19.154+0200 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-09-14T06:27:19.154+0200 I CONTROL  [initandlisten] 
+&gt; use xcelvie_salesledger_db
+switched to db xcelvie_salesledger_db
+&gt; show collections
+orderbooks
+products
+&gt; 
+&gt; db.orderbooks.find().pretty()
+{
+	&quot;_id&quot; : ObjectId(&quot;5f5f3662218f1609a2789e63&quot;),
+	&quot;createdDate&quot; : ISODate(&quot;2020-09-14T09:22:42.976Z&quot;),
+	&quot;clientEmail&quot; : &quot;kevin&quot;,
+	&quot;_class&quot; : &quot;com.contexua.xcelvie.models.OrderBook&quot;
+}
+{
+	&quot;_id&quot; : ObjectId(&quot;5f5f3d7e1915a85bf01d196e&quot;),
+	&quot;createdDate&quot; : ISODate(&quot;2020-09-14T09:53:02.134Z&quot;),
+	&quot;clientEmail&quot; : &quot;jimbo&quot;,
+	&quot;orders&quot; : [
+		{
+			&quot;orderId&quot; : &quot;jimbo_205977&quot;,
+			&quot;orderTotal&quot; : 0
+		},
+		{
+			&quot;orderId&quot; : &quot;jimbo_41428&quot;,
+			&quot;orderTotal&quot; : 958.5,
+			&quot;orderItems&quot; : [
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 9,
+					&quot;lineItemTotal&quot; : 319.5
+				},
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 9,
+					&quot;lineItemTotal&quot; : 319.5
+				},
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 9,
+					&quot;lineItemTotal&quot; : 319.5
+				}
+			]
+		},
+		{
+			&quot;createdDate&quot; : ISODate(&quot;2020-09-14T12:24:10.356Z&quot;),
+			&quot;orderId&quot; : &quot;jimbo_159255&quot;,
+			&quot;orderTotal&quot; : 14519.5,
+			&quot;orderItems&quot; : [
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 9,
+					&quot;lineItemTotal&quot; : 319.5
+				},
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 200,
+					&quot;lineItemTotal&quot; : 7100
+				},
+				{
+					&quot;skuid&quot; : &quot;Genfro_200_286&quot;,
+					&quot;quantity&quot; : 200,
+					&quot;lineItemTotal&quot; : 7100
+				}
+			]
+		}
+	],
+	&quot;_class&quot; : &quot;com.contexua.xcelvie.models.OrderBook&quot;
+}
+&gt; 
+</pre>
+
 
 ## Contributing
 
