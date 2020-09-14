@@ -73,8 +73,8 @@ Sep 14 10:27:17 kevin-notebook systemd[1]: Started An object/document-oriented d
 ```
 Note the progress of the spring boot startup log and ensure the tests run correctly.
 
-* Navigate to the deployed swagger UI to performm the API functions:
-
+* Open a 'browser of your choice' and paste in the swagger URL: http://localhost:8080/swagger-ui/
+* Follow the instructions in the swagger UI to perform the API functions:
 
 
 ![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-xcelvie.png)
