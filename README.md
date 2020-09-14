@@ -78,7 +78,7 @@ Note the progress of the spring boot startup log and ensure the tests run correc
 
 
 
-![alt text](https://github.com/[username]/[reponame]/docs/[branch]/swaggger-xcelvie.png?raw=true)
+![an image of swagger used to acccess the API for xcelvie-rest by kevin hamid.](https://github.com/contexua/xcelvie-rest/blob/master/docs/swagger-xcelvie.png)
 
 ## Contributing
 
@@ -86,7 +86,7 @@ If you have any general questions about the function of the API, then the docume
 
 ## Improvements
 
-*
+* 
 *
 *
 *
