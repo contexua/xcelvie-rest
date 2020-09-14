@@ -175,12 +175,9 @@ If you have any general questions about the function of the API, then the docume
 
 ## Improvements
 
-* 
-*
-*
-*
-*
-
+* Testing is pretty basic - just testing the controller httpstatus messages, I mocked the service call, but still need to mock the DAO's
+* Persistence should probably be via a que, but for this example the service is on the same JVM.
+* Service helpers are hardcoded, business domain services should be used.
 
 ## License
 This application is free to use in any scenario with no responsibility owned by Kevin Hamid.
