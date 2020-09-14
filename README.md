@@ -1,7 +1,7 @@
 # Xcelvie-rest
 
-An example REST API controller written in spring-boot with minimul dependencies. The application implemments a product / order book HTTP API for a sample pharmeceutical company. Given the API, a client can query the product catalogue for published products. Query the catalogue by product title. Insert a new product, update a product and delete a product.
-Clients can also place orders for produts.
+An example REST API controller written in spring-boot with minimal dependencies. The application implemments a product / order book HTTP API for a sample pharmeceutical company. Given the API, a client can query the product catalogue for published products. Query the catalogue by product title. Insert a new product, update a product and delete a product.
+Clients can also place orders for products.
 
 ## Pre-Rquisites
 
