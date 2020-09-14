@@ -1,7 +1,6 @@
 # Xcelvie-rest
 
-An example REST API controller written in spring-boot with minimul dependencies. The application implemments a product and order book HTTP API for a sample pharmeceutical company. Given the API, a client can query the product catalogue for published products. Query the catalogue by product titile. Insert a new product, update a product and delete a product. 
-
+An example REST API controller written in spring-boot with minimul dependencies. The application implemments a product / order book HTTP API for a sample pharmeceutical company. Given the API, a client can query the product catalogue for published products. Query the catalogue by product title. Insert a new product, update a product and delete a product.
 Clients can also place orders for produts.
 
 ## Pre-Rquisites
@@ -15,10 +14,10 @@ Clients can also place orders for produts.
 
 ## Installation for Postman, Mongo, xcelvie-rest
 
-A linux OS was used to install the application. I assume you have an IDE and a JDK installed.For Postman and Mongo, you can follwo these steps. 
+A linux OS was used to install the application. I assume you have an IDE and a JDK installed.For Postman and Mongo, you can follow these steps. 
 
-1. Install a community version of mongo locallay. You can follow instructions here : https://www.mongodb.com/try/download/community
-2. Install Postman locally. You can follow instructions here: https://www.postman.com/downloads/ 
+1. Install a community version of mongo locally: https://www.mongodb.com/try/download/community
+2. Install Postman locally: https://www.postman.com/downloads/ 
 3. Clone this project in your deployment directory
 
 ```bash
@@ -50,7 +49,7 @@ After you have checked out the project, you need to build it using maven:
 
 <pre> 
 
-<font color="#859900"><b>●</b></font> mongodb.service - An object/document-oriented database
+ mongodb.service - An object/document-oriented database
    Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
    Active: <font color="#859900"><b>active (running)</b></font> since Mon 2020-09-14 06:27:17 CEST; 1h 11min ago
      Docs: man:mongod(1)
@@ -60,7 +59,7 @@ After you have checked out the project, you need to build it using maven:
    CGroup: /system.slice/mongodb.service
            └─867 /usr/bin/mongod --unixSocketPrefix=/run/mongodb --config /etc/mongodb.conf
 
-Sep 14 06:27:17 kevin-notebook systemd[1]: Started An object/document-oriented database.
+Sep 14 10:27:17 kevin-notebook systemd[1]: Started An object/document-oriented database.
 
 </pre>
 
