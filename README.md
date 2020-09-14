@@ -6,12 +6,12 @@ Clients can also place orders for produts.
 
 ## Pre-Rquisites
 
-This application was writen ussing InteliJ IDE.
-This application was written using an open source JDK (Open JDK VM Correto 11).
-This application saves data to an instance of mmongodb (no password is set, runnning on the standard port).
-This application uses Postman to test API calls.
-This application uses Maven for life-cyle management and depenndency management.
-This appliication is compatible with Java SE 8.
+* This application was writen ussing InteliJ IDE.
+* This application was written using an open source JDK (Open JDK VM Correto 11).
+* This application saves data to an instance of mmongodb (no password is set, runnning on the standard port).
+* This application uses Postman to test API calls.
+* This application uses Maven for life-cyle management and depenndency management.
+* This appliication is compatible with Java SE 8.
 
 ## Installation for Postman, Mongo, xcelvie-rest
 
@@ -35,28 +35,62 @@ After you have checked out the project, you need to build it using maven:
 
 ~/dev/xcelvie-rest/mvn clean install
 
-~/dev/xcelvie-rest/mvn spring-boot:run
-
 ```
 
 
 ## Usage
 
-Out of the box, you 
+* Ensure your mongodb is running - Mine runs as a service:
 
-```python
-import foobar
+```bash
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+~/dev/xcelvie-rest/systemctl status mongodb
+
 ```
 
+<pre> 
+
+<font color="#859900"><b>●</b></font> mongodb.service - An object/document-oriented database
+   Loaded: loaded (/lib/systemd/system/mongodb.service; enabled; vendor preset: enabled)
+   Active: <font color="#859900"><b>active (running)</b></font> since Mon 2020-09-14 06:27:17 CEST; 1h 11min ago
+     Docs: man:mongod(1)
+ Main PID: 867 (mongod)
+    Tasks: 24 (limit: 4915)
+   Memory: 187.2M
+   CGroup: /system.slice/mongodb.service
+           └─867 /usr/bin/mongod --unixSocketPrefix=/run/mongodb --config /etc/mongodb.conf
+
+Sep 14 06:27:17 kevin-notebook systemd[1]: Started An object/document-oriented database.
+
+</pre>
+
+
+* Start the application. It's a spring boot server using an embedded catalina engine running on 8080:
+
+```bash
+
+~/dev/xcelvie-rest/mvn spring-boot:run
+
+```
+Note the progress of the spring boot startup log and ensure the tests run correctly.
+
+* Navigate to the deployed swagger UI to performm the API functions:
+
+
+
+![alt text](https://github.com/[username]/[reponame]/docs/[branch]/swaggger-xcelvie.png?raw=true)
+
 ## Contributing
+
 If you have any general questions about the function of the API, then the documentation via Swagger or via the code should help. You can leave comments against this reopository if you like.
 
 ## Improvements
 
+*
+*
+*
+*
+*
 
 
 ## License
